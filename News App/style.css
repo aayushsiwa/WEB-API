@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --primary-text-color: white;
+    --secondary-text-color: grey;
+    --accent-color: red;
+    --accent-color-dark: blue;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: var(--primary-text-color);
+}
+
+.dark {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.light {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: black;
+    box-shadow: 0 0 4px var(--accent-color);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--accent-color-dark);
+}
+
+.hover-link:active {
+    color: var(--accent-color);
+}
+
+.nav-item.active {
+    color: var(--accent-color-dark);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+}
+
+.search-input {
+    width: 200px;
+    height: 100%;
+    border-radius: 4px;
+    padding-inline: 12px;
+    border: 1px solid var(--accent-color);
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+i {
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    height: 400px;
+    box-shadow: 0 0 4px var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: rgb(18, 18, 18); */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px var(--accent-color-dark);
+    /* background-color: rgb(15, 15, 15); */
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.card-source {
+    margin-block: 12px;
+}
