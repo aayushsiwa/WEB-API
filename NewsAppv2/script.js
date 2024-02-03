@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const url = `https://gnews.io/api/v4/search?q=`;
 
 const API_KEY = process.env.NEWS_V2_API_KEY;
